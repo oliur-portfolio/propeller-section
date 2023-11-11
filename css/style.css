@@ -690,10 +690,12 @@ footer.footer .col h2 {
   flex: 1;
   position: relative;
   padding-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  /* min-height: 350px; */
 }
 
 .tab-basic-content__images-main {
-  display: block;
   margin-left: auto;
   width: 500px;
   height: auto;
@@ -704,11 +706,21 @@ footer.footer .col h2 {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  position: relative;
+  top: 0;
+  right: 70px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition-delay: 0.12s;
 }
 
 .tab-basic-content__images-small {
   position: absolute;
-  bottom: -100px;
+  bottom: -70px;
   left: 0;
   width: 350px;
   height: auto;
@@ -718,6 +730,22 @@ footer.footer .col h2 {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.tab-pane.active .tab-basic-content__images-small {
+  bottom: -100px;
+  opacity: 1;
+}
+
+.tab-pane.active .tab-basic-content__images-main {
+  right: 0;
+  opacity: 1;
 }
 
 /**************** P3 Airport Area ****************/
@@ -1158,8 +1186,6 @@ header#about-black {
   }
 
   .tab-block .tab-mnu li {
-    width: fit-content;
-    flex: none;
     padding: 12px 20px;
     margin-right: 20px;
     font-size: 16px;
@@ -1176,8 +1202,11 @@ header#about-black {
   }
 
   .tab-block .tab-mnu {
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-bottom: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .tab-basic-content__images-small {
@@ -1315,6 +1344,15 @@ header#about-black {
 
   .p3-airport-area {
     padding: 80px 0;
+  }
+
+  .tab-basic-content__images-main {
+    right: 0;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
   }
 }
 @media only screen and (max-width: 480px) {
