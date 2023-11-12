@@ -692,7 +692,6 @@ footer.footer .col h2 {
   padding-bottom: 30px;
   display: flex;
   justify-content: flex-end;
-  /* min-height: 350px; */
 }
 
 .tab-basic-content__images-main {
@@ -707,9 +706,6 @@ footer.footer .col h2 {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   position: relative;
-  top: 0;
-  right: 70px;
-  opacity: 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -720,8 +716,6 @@ footer.footer .col h2 {
 
 .tab-basic-content__images-small {
   position: absolute;
-  bottom: -70px;
-  left: 0;
   width: 350px;
   height: auto;
   aspect-ratio: 2/1.6;
@@ -730,7 +724,6 @@ footer.footer .col h2 {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  opacity: 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -738,15 +731,101 @@ footer.footer .col h2 {
   -o-transition: all 0.3s linear;
 }
 
-.tab-pane.active .tab-basic-content__images-small {
-  bottom: -100px;
-  opacity: 1;
+/* Tab Pane 1 Animation */
+.tab-pane1 .tab-basic-content__images-main {
+  top: 0;
+  right: 70px;
+  opacity: 0;
 }
 
-.tab-pane.active .tab-basic-content__images-main {
+.tab-pane1.active .tab-basic-content__images-main {
   right: 0;
   opacity: 1;
 }
+
+.tab-pane1 .tab-basic-content__images-small {
+  bottom: -70px;
+  left: 0;
+  opacity: 0;
+}
+
+.tab-pane1.active .tab-basic-content__images-small {
+  bottom: -100px;
+  opacity: 1;
+}
+/* Tab Pane 1 Animation */
+
+/* Tab Pane 2 Animation */
+.tab-pane2 .tab-basic-content__images-main {
+  top: 70px;
+  right: 0;
+  opacity: 0;
+}
+
+.tab-pane2.active .tab-basic-content__images-main {
+  top: 0;
+  opacity: 1;
+}
+
+.tab-pane2 .tab-basic-content__images-small {
+  bottom: -100px;
+  left: -70px;
+  opacity: 0;
+}
+
+.tab-pane2.active .tab-basic-content__images-small {
+  left: 0;
+  opacity: 1;
+}
+/* Tab Pane 2 Animation */
+
+/* Tab Pane 3 Animation */
+.tab-pane3 .tab-basic-content__images-main {
+  top: 0;
+  left: 70px;
+  opacity: 0;
+}
+
+.tab-pane3.active .tab-basic-content__images-main {
+  left: 0;
+  opacity: 1;
+}
+
+.tab-pane3 .tab-basic-content__images-small {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.tab-pane3.active .tab-basic-content__images-small {
+  bottom: -100px;
+  opacity: 1;
+}
+/* Tab Pane 3 Animation */
+
+/* Tab Pane 4 Animation */
+.tab-pane4 .tab-basic-content__images-main {
+  top: -70px;
+  left: 0;
+  opacity: 0;
+}
+
+.tab-pane4.active .tab-basic-content__images-main {
+  top: 0;
+  opacity: 1;
+}
+
+.tab-pane4 .tab-basic-content__images-small {
+  bottom: -100px;
+  left: 70px;
+  opacity: 0;
+}
+
+.tab-pane4.active .tab-basic-content__images-small {
+  left: 0;
+  opacity: 1;
+}
+/* Tab Pane 4 Animation */
 
 /**************** P3 Airport Area ****************/
 
